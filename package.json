@@ -1,0 +1,19 @@
+{
+  "name": "projet-3",
+  "version": "1.0.0",
+  "description": "Projet 3 formmation développeur web Openclassrooms",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./sass/main.scss:./css/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/OsaKanjozoku/Ohmyfood.git"
+  },
+  "author": "Lucas Gille",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/OsaKanjozoku/Ohmyfood/issues"
+  },
+  "homepage": "https://github.com/OsaKanjozoku/Ohmyfood#readme"
+}
