@@ -54,11 +54,6 @@ header{
 .fonctionnement{
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
-    width: 100%;
-    justify-content: space-around;
-    align-items: flex-start;
-    font-size: 1.5em;
     
     &__list{
         padding: 20px;
@@ -73,7 +68,6 @@ header{
     }
     & ul{
         padding-left: 0px;
-        width: auto;
     }
 }
 
