@@ -1,0 +1,232 @@
+@charset "UTF-8";
+@font-face {
+  font-family: "Roboto";
+  src: url("Polices/RobotoCondensed-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Shrikhand";
+  src: url("Polices/Shrikhand-Regular.otf");
+}
+
+p {
+  font-family: "Roboto", arial,sans-serif;
+}
+
+h1, h3 {
+  font-family: "Shrikhand", arial,sans-serif;
+}
+
+ul {
+  list-style-type: none;
+}
+
+html {
+  font-size: 17px;
+}
+
+header {
+  width: 100%;
+}
+
+header p {
+  background-color: #e7e7e7;
+  text-align: center;
+  height: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 0px;
+  font-size: 1.2em;
+}
+
+header p i {
+  margin-right: 20px;
+}
+
+.entête {
+  background-color: #f3f3f3;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 100%;
+  height: 300px;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+}
+
+.entête .submit {
+  color: white;
+  background: #9356dc;
+  background: -webkit-gradient(linear, left bottom, left top, from(#9356dc), color-stop(73%, #ff79da));
+  background: linear-gradient(0deg, #9356dc 0%, #ff79da 73%);
+  border-radius: 50px;
+  height: 50px;
+  width: 230px;
+  margin-bottom: 30px;
+  border: none;
+  font-size: 1em;
+}
+
+.entête .submit:hover {
+  color: #99E2D0;
+}
+
+.entête h1 {
+  font-size: 2em;
+}
+
+.entête p {
+  width: 100%;
+  font-size: 1.2em;
+}
+
+.fonctionnement {
+  font-size: 1.5em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.fonctionnement__list {
+  padding: 20px;
+  border-radius: 20px;
+  margin-bottom: 20px;
+  width: 100%;
+  height: 40px;
+  background-color: #e9e9e9;
+}
+
+.fonctionnement i {
+  padding-right: 40px;
+}
+
+.fonctionnement ul {
+  padding-left: 0px;
+}
+
+.restaurants {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 100%;
+  background-color: #e9e9e9;
+  font-size: 1.3em;
+}
+
+.restaurants__box {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  max-width: 500px;
+  height: 350px;
+  border: 2px solid white;
+  border-radius: 20px;
+  text-align: left;
+  overflow: hidden;
+  margin-bottom: 15px;
+  background-color: white;
+}
+
+.restaurants a {
+  color: black;
+  text-decoration: none;
+}
+
+.restaurants a:hover {
+  color: #99E2D0;
+}
+
+.restaurants__box img {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 500px;
+  height: 250px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  background-color: white;
+  border: transparent;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  overflow: hidden;
+}
+
+.restaurants ul {
+  padding-left: 0px;
+}
+
+.restaurants h3 {
+  margin: 5px 0px 0px 15px;
+  font-weight: bold;
+}
+
+.restaurants p {
+  margin: 10px 0px 0px 15px;
+}
+
+footer {
+  background-color: #494949;
+  width: 100%;
+  color: white;
+  font-size: 1.1em;
+  padding-left: 5px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 15px 0px 15px 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+footer a {
+  color: white;
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: black;
+}
+
+footer i {
+  padding-right: 10px;
+}
+
+footer ul {
+  padding: 0px;
+}
+
+footer li {
+  margin-bottom: 7px;
+}
+
+footer h3 {
+  margin-bottom: 10px;
+  font-size: 1.5em;
+}
+/*# sourceMappingURL=main.css.map */
