@@ -1,14 +1,40 @@
-ul{
-    list-style-type: none;
+@font-face{
+    font-family: "Roboto";
+    src: url("Polices/RobotoCondensed-Regular.ttf");
+}
+@font-face{
+    font-family: "Shrikhand";
+    src: url("Polices/Shrikhand-Regular.otf");
+}
+
+@import "menus.scss";
+
+p, h1, h3{
+    font-family: "Roboto", arial,sans-serif;
 }
 
 
+
+
+ul{
+    list-style-type: none;
+}
 html{
-    font-size: 17px;
+    font-size: 15px;
+    width: 100%;
 }
 
 header{
     width: 100%;
+    & img{
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        margin: 10px;
+        padding: 20px;
+        box-sizing: border-box;
+    }
     & p{
         background-color: rgb(231, 231, 231);
         text-align: center;
@@ -17,6 +43,7 @@ header{
         align-items: center;
         justify-content: center;
         margin: 0px;
+        font-size: 1.2em;
         & i{
             margin-right: 20px;
         }
@@ -34,10 +61,17 @@ header{
     text-align: center;
     & .submit{
         color: white;
-        background-color: #9356DC ;
-        border-radius: 20px;
-        height: 40px;
+        background: rgb(147,86,220);
+        background: linear-gradient(0deg, rgba(147,86,220,1) 0%, rgba(255,121,218,1) 73%);
+        border-radius: 50px;
+        height: 50px;
+        width: 230px;
         margin-bottom: 30px;
+        border: none;
+        font-size: 1em;
+    }
+    & .submit:hover{
+        color: #99E2D0;
     }
     & h1{
         font-size: 2em;
@@ -52,22 +86,31 @@ header{
 
 
 .fonctionnement{
+    font-size: 1.5em;
     display: flex;
+    flex-wrap: wrap;
     flex-direction: column;
-    
-    &__list{
-        padding: 20px;
-        border-radius: 20px;
-        margin-bottom: 20px;
-        width: 100%;
-        height: 40px;
-        background-color: rgb(233, 233, 233);
-    }
     & i{
         padding-right: 40px;
     }
     & ul{
         padding-left: 0px;
+        justify-content: space-around;
+    }
+    &__submit{
+        width: 100%;
+        height: 90px;
+        border-radius: 30px;
+        border: none;
+        font-size: 1.1em;
+        padding: 0px;
+        margin-bottom: 30px;
+    }
+    &__submit:hover{
+        background-color: #dabffdbd;
+        & i{
+            color: #9356DC;
+        }
     }
 }
 
@@ -77,9 +120,11 @@ header{
     width: 100%;
     background-color: rgb(233, 233, 233);
     font-size: 1.3em;
+    align-items: center;
+    justify-content: space-around;    
     &__box{
         box-sizing: border-box;
-        max-width: 500px;
+        width: 650;
         height: 350px;
         border: 2px solid white;
         border-radius: 20px;
@@ -91,13 +136,15 @@ header{
     & a{
         color: black;
         text-decoration: none;
+        width: 650px;
+        height: 350px;
     }
     & a:hover{
         color: #99E2D0 ;
     }
     &__box img{
         box-sizing: border-box;
-        width: 500px;
+        width: 650px;
         height: 250px;
         object-fit: cover;
         background-color: white;
@@ -111,11 +158,23 @@ header{
     }
     & h3{
         margin: 5px 0px 0px 15px;
-        font-weight: bold;
-
+    }
+    & h1{
+        width: 100%;
     }
     & p{
         margin: 10px 0px 0px 15px;
+    }
+    & .fa-heart{
+        transform: translate(590px, -50px);
+        font-size: 1.5em;
+        &:active{
+            color: #9356DC;
+        }
+        &:hover{
+            cursor:grab;
+            color: #9356DC;
+        }
     }
 }
 
@@ -124,7 +183,33 @@ header{
 
 footer{
     background-color: rgb(73, 73, 73);
-    display: flex;
     width: 100%;
     color: white;
+    font-size: 1.1em;
+    padding-left: 5px;
+    box-sizing: border-box;
+    padding: 15px 0px 15px 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    & a{
+        color: white;
+        text-decoration: none;
+    }
+    & a:hover{
+        color: black;
+    }
+    & i{
+        padding-right: 10px;
+    }
+    & ul{
+        padding: 0px;
+    }
+    & li{
+        margin-bottom: 7px;
+    }
+    & h3{
+        margin-bottom: 10px;
+        font-size: 1.3em
+    }
 }
