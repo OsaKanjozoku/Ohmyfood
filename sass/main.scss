@@ -1,54 +1,10 @@
-@font-face{
-    font-family: "Roboto";
-    src: url("Polices/RobotoCondensed-Regular.ttf");
-}
-@font-face{
-    font-family: "Shrikhand";
-    src: url("Polices/Shrikhand-Regular.otf");
-}
+@import "ressources.scss";
+@include footer-style;
+@include html-style;
+@include header-style;
+@include font-family;
+@include body-style;
 
-@import "menus.scss";
-
-p, h1, h3{
-    font-family: "Roboto", arial,sans-serif;
-}
-
-
-
-
-ul{
-    list-style-type: none;
-}
-html{
-    font-size: 15px;
-    width: 100%;
-}
-
-header{
-    width: 100%;
-    & img{
-        display: flex;
-        width: 100%;
-        justify-content: center;
-        align-items: center;
-        margin: 10px;
-        padding: 20px;
-        box-sizing: border-box;
-    }
-    & p{
-        background-color: rgb(231, 231, 231);
-        text-align: center;
-        height: 60px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin: 0px;
-        font-size: 1.2em;
-        & i{
-            margin-right: 20px;
-        }
-    }
-}
 
 .entête{
     background-color: rgb(243, 243, 243);
@@ -60,9 +16,9 @@ header{
     align-items: center;
     text-align: center;
     & .submit{
-        color: white;
-        background: rgb(147,86,220);
-        background: linear-gradient(0deg, rgba(147,86,220,1) 0%, rgba(255,121,218,1) 73%);
+        color: $white;
+        background: $color-primary;
+        background: linear-gradient(0deg, $color-primary 0%, $color-secondary 73%);
         border-radius: 50px;
         height: 50px;
         width: 230px;
@@ -71,7 +27,7 @@ header{
         font-size: 1em;
     }
     & .submit:hover{
-        color: #99E2D0;
+        color: $color-tertiary;
     }
     & h1{
         font-size: 2em;
@@ -80,7 +36,17 @@ header{
         width: 100%;
         font-size: 1.2em;
     }
-
+    & .ville{
+        background-color: rgb(231, 231, 231);
+            text-align: center;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0px;
+            font-size: 1.2em;
+            letter-spacing: 0.1em;
+    }
 }
 
 
@@ -90,26 +56,42 @@ header{
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
+    & .fa-circle{
+        padding-right: 0px;
+        color: $color-primary;
+        font-size: 1.3em;
+        transform: translate(18px, 85px);
+    }
+    & .number{
+        margin: 0px;
+        padding: 0px;
+        transform: translate(26px, 55px);
+        font-size: 0.9em;
+        color: $white;
+    }
     & i{
         padding-right: 40px;
     }
     & ul{
         padding-left: 0px;
-        justify-content: space-around;
+        margin-top: -30px;
+        height: 500px;
+        justify-content: space-between;
     }
     &__submit{
-        width: 100%;
+        width: 95%;
         height: 90px;
         border-radius: 30px;
         border: none;
         font-size: 1.1em;
         padding: 0px;
-        margin-bottom: 30px;
+        margin-left: 30px;
+        margin-bottom: -20px;
     }
     &__submit:hover{
         background-color: #dabffdbd;
         & i{
-            color: #9356DC;
+            color: $color-primary;
         }
     }
 }
@@ -124,14 +106,25 @@ header{
     justify-content: space-around;    
     &__box{
         box-sizing: border-box;
-        width: 650;
+        width: 650px;
         height: 350px;
-        border: 2px solid white;
+        border: 2px solid $white;
         border-radius: 20px;
         text-align:left;
         overflow: hidden;
         margin-bottom: 15px;
-        background-color: white;
+        background-color: $white;
+        & .new{
+            background-color: $color-tertiary;
+            color: #007054;
+            width: 85px;
+            height: 27px;
+            margin: 0px;
+            padding: 3px;
+            transform: translate(540px, -303px);
+            font-size: 1.1em;
+            border-radius: 10px;
+        }
     }
     & a{
         color: black;
@@ -140,14 +133,14 @@ header{
         height: 350px;
     }
     & a:hover{
-        color: #99E2D0 ;
+        color: $color-tertiary ;
     }
     &__box img{
         box-sizing: border-box;
         width: 650px;
         height: 250px;
         object-fit: cover;
-        background-color: white;
+        background-color: $white;
         border: transparent;
         border-top-left-radius: 20px;
         border-top-right-radius: 20px;
@@ -165,51 +158,24 @@ header{
     & p{
         margin: 10px 0px 0px 15px;
     }
-    & .fa-heart{
-        transform: translate(590px, -50px);
-        font-size: 1.5em;
-        &:active{
-            color: #9356DC;
+    & .heart{
+        color: rgb(163, 163, 163);
+        transform: translate(590px, -65px);
+        font-size: 1.7em;
+        width: 30px;
+        height: 30px;
+        i:nth-child(1){
+            display: none;
         }
         &:hover{
-            cursor:grab;
-            color: #9356DC;
+            cursor: grab;
+            i:nth-child(1){
+                color: $color-primary;
+                display: block;
+            }
+            i:nth-child(2){
+                display: none;
+            }
         }
-    }
-}
-
-
-
-
-footer{
-    background-color: rgb(73, 73, 73);
-    width: 100%;
-    color: white;
-    font-size: 1.1em;
-    padding-left: 5px;
-    box-sizing: border-box;
-    padding: 15px 0px 15px 10px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    & a{
-        color: white;
-        text-decoration: none;
-    }
-    & a:hover{
-        color: black;
-    }
-    & i{
-        padding-right: 10px;
-    }
-    & ul{
-        padding: 0px;
-    }
-    & li{
-        margin-bottom: 7px;
-    }
-    & h3{
-        margin-bottom: 10px;
-        font-size: 1.3em
     }
 }

@@ -1,0 +1,134 @@
+@import "ressources.scss";
+@include footer-style;
+@include html-style;
+@include font-family;
+@include body-style;
+
+header{
+    display: flex;
+    width: 100%;
+    height: 70px;
+    margin-bottom: 30px;
+    & .submit{
+        border: none;
+        background-color: transparent;
+    }
+    & i{
+        font-size: 2.5em;
+        color: black;
+        &:hover{
+            color: $color-tertiary;
+        }
+    }
+    & img{
+        width: 50%;
+        text-align: center;
+        margin: auto;
+    }
+}
+
+.entête{
+    box-sizing: border-box;
+    width: 100%;
+    padding: 0px;
+    margin: 0px;
+}
+
+
+.menu{
+    width: 100%;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    background-color: rgb(245, 245, 245);
+    padding-bottom: 10px;
+    transform: translate(0px, -50px);
+    & ul{
+        padding-left: 5px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    & li{
+        background-color: $white;
+        box-sizing: border-box;
+        width: 97%;
+        height: 80px;
+        padding: 0px 30px 5px 20px;
+        margin: 5px;
+        border-radius: 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    & h1{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 80%;
+        height: 50px;
+        margin: 0px;
+        padding: 20px;
+        font-size: 1.8em;
+        font-family: "Shrikhand", arial,sans-serif;
+        word-spacing: 0.2em;
+    }
+    & h3{
+        margin: 0px 0px 10px 0px;
+    }
+    & p{
+        font-size: 1.1em;
+        margin: 0px;
+    }
+    & .heart{
+            color: rgb(163, 163, 163);
+            font-size: 1.5em;
+            width: 30px;
+            height: 30px;
+            i:nth-child(1){
+                display: none;
+            }
+            &:hover{
+                cursor: grab;
+                i:nth-child(1){
+                    color: $color-primary;
+                    display: block;
+                }
+                i:nth-child(2){
+                    display: none;
+                }
+            }
+        }
+}
+
+
+h2{
+    text-decoration: 3px underline $color-tertiary;
+    padding-left: 10px;
+}
+
+
+.button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 30px;
+    transform: translate(0px, -50px);
+    .submit{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: $white;
+        background: $color-primary;
+        background: linear-gradient(0deg, $color-primary 0%, $color-secondary 73%);
+        border-radius: 50px;
+        height: 50px;
+        width: 230px;
+        border: none;
+        font-size: 1em;
+    }
+    & .submit:hover{
+        color: $color-tertiary;
+}
+}
+

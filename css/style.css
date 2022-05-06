@@ -7,43 +7,76 @@
   font-family: "Shrikhand";
   src: url("Polices/Shrikhand-Regular.otf");
 }
-p, h1, h3 {
-  font-family: "Roboto", arial, sans-serif;
+footer {
+  background-color: rgb(73, 73, 73);
+  width: 100%;
+  color: white;
+  font-size: 1.1em;
+  padding-left: 5px;
+  box-sizing: border-box;
+  padding: 15px 0px 15px 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
-
-ul {
-  list-style-type: none;
+footer a {
+  color: white;
+  text-decoration: none;
+}
+footer a:hover {
+  color: black;
+}
+footer i {
+  padding-right: 10px;
+}
+footer .fa-handshake-angle {
+  padding-right: 5px;
+}
+footer ul {
+  padding: 0px;
+}
+footer li {
+  margin-bottom: 7px;
+}
+footer h1 {
+  margin-bottom: 10px;
+  font-size: 1.4em;
+  font-family: "Shrikhand", arial, sans-serif;
+  letter-spacing: 0.1em;
+}
+footer h2 {
+  font-size: 1em;
+  margin: 0px;
 }
 
 html {
   font-size: 15px;
   width: 100%;
 }
+html ul {
+  list-style-type: none;
+}
 
 header {
+  display: flex;
   width: 100%;
+  height: 70px;
+  margin-bottom: 30px;
 }
 header img {
-  display: flex;
-  width: 100%;
-  justify-content: center;
-  align-items: center;
-  margin: 10px;
-  padding: 20px;
-  box-sizing: border-box;
-}
-header p {
-  background-color: rgb(231, 231, 231);
+  width: 50%;
   text-align: center;
-  height: 60px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 0px;
-  font-size: 1.2em;
+  margin: auto;
 }
-header p i {
-  margin-right: 20px;
+
+p, h1, h3 {
+  font-family: "Roboto", arial, sans-serif;
+}
+
+body {
+  width: 100%;
+  margin: 0px;
+  padding: 0px;
 }
 
 .entête {
@@ -58,8 +91,8 @@ header p i {
 }
 .entête .submit {
   color: white;
-  background: rgb(147, 86, 220);
-  background: linear-gradient(0deg, rgb(147, 86, 220) 0%, rgb(255, 121, 218) 73%);
+  background: #9356DC;
+  background: linear-gradient(0deg, #9356DC 0%, #FF79DA 73%);
   border-radius: 50px;
   height: 50px;
   width: 230px;
@@ -77,6 +110,17 @@ header p i {
   width: 100%;
   font-size: 1.2em;
 }
+.entête .ville {
+  background-color: rgb(231, 231, 231);
+  text-align: center;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0px;
+  font-size: 1.2em;
+  letter-spacing: 0.1em;
+}
 
 .fonctionnement {
   font-size: 1.5em;
@@ -84,21 +128,37 @@ header p i {
   flex-wrap: wrap;
   flex-direction: column;
 }
+.fonctionnement .fa-circle {
+  padding-right: 0px;
+  color: #9356DC;
+  font-size: 1.3em;
+  transform: translate(18px, 85px);
+}
+.fonctionnement .number {
+  margin: 0px;
+  padding: 0px;
+  transform: translate(26px, 55px);
+  font-size: 0.9em;
+  color: white;
+}
 .fonctionnement i {
   padding-right: 40px;
 }
 .fonctionnement ul {
   padding-left: 0px;
-  justify-content: space-around;
+  margin-top: -30px;
+  height: 500px;
+  justify-content: space-between;
 }
 .fonctionnement__submit {
-  width: 100%;
+  width: 95%;
   height: 90px;
   border-radius: 30px;
   border: none;
   font-size: 1.1em;
   padding: 0px;
-  margin-bottom: 30px;
+  margin-left: 30px;
+  margin-bottom: -20px;
 }
 .fonctionnement__submit:hover {
   background-color: rgba(218, 191, 253, 0.7411764706);
@@ -118,7 +178,7 @@ header p i {
 }
 .restaurants__box {
   box-sizing: border-box;
-  width: 650;
+  width: 650px;
   height: 350px;
   border: 2px solid white;
   border-radius: 20px;
@@ -126,6 +186,17 @@ header p i {
   overflow: hidden;
   margin-bottom: 15px;
   background-color: white;
+}
+.restaurants__box .new {
+  background-color: #99E2D0;
+  color: #007054;
+  width: 85px;
+  height: 27px;
+  margin: 0px;
+  padding: 3px;
+  transform: translate(540px, -303px);
+  font-size: 1.1em;
+  border-radius: 10px;
 }
 .restaurants a {
   color: black;
@@ -159,49 +230,25 @@ header p i {
 .restaurants p {
   margin: 10px 0px 0px 15px;
 }
-.restaurants .fa-heart {
-  transform: translate(590px, -50px);
-  font-size: 1.5em;
+.restaurants .heart {
+  color: rgb(163, 163, 163);
+  transform: translate(590px, -65px);
+  font-size: 1.7em;
+  width: 30px;
+  height: 30px;
 }
-.restaurants .fa-heart:active {
-  color: #9356DC;
+.restaurants .heart i:nth-child(1) {
+  display: none;
 }
-.restaurants .fa-heart:hover {
+.restaurants .heart:hover {
   cursor: grab;
+}
+.restaurants .heart:hover i:nth-child(1) {
   color: #9356DC;
+  display: block;
 }
-
-footer {
-  background-color: rgb(73, 73, 73);
-  width: 100%;
-  color: white;
-  font-size: 1.1em;
-  padding-left: 5px;
-  box-sizing: border-box;
-  padding: 15px 0px 15px 10px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-footer a {
-  color: white;
-  text-decoration: none;
-}
-footer a:hover {
-  color: black;
-}
-footer i {
-  padding-right: 10px;
-}
-footer ul {
-  padding: 0px;
-}
-footer li {
-  margin-bottom: 7px;
-}
-footer h3 {
-  margin-bottom: 10px;
-  font-size: 1.3em;
+.restaurants .heart:hover i:nth-child(2) {
+  display: none;
 }
 
 /*# sourceMappingURL=style.css.map */
