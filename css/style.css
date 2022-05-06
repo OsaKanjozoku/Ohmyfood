@@ -135,6 +135,7 @@ body {
   transform: translate(18px, 85px);
 }
 .fonctionnement .number {
+  width: 50px;
   margin: 0px;
   padding: 0px;
   transform: translate(26px, 55px);
@@ -169,16 +170,15 @@ body {
 
 .restaurants {
   display: flex;
-  flex-wrap: wrap;
-  width: 100%;
+  flex-direction: column;
+  max-width: 100%;
   background-color: rgb(233, 233, 233);
   font-size: 1.3em;
-  align-items: center;
-  justify-content: space-around;
 }
 .restaurants__box {
   box-sizing: border-box;
-  width: 650px;
+  justify-content: space-around;
+  width: 100%;
   height: 350px;
   border: 2px solid white;
   border-radius: 20px;
@@ -194,9 +194,11 @@ body {
   height: 27px;
   margin: 0px;
   padding: 3px;
-  transform: translate(540px, -303px);
   font-size: 1.1em;
   border-radius: 10px;
+  position: absolute;
+  top: 87.5%;
+  right: 5%;
 }
 .restaurants a {
   color: black;
@@ -209,7 +211,7 @@ body {
 }
 .restaurants__box img {
   box-sizing: border-box;
-  width: 650px;
+  width: 100%;
   height: 250px;
   object-fit: cover;
   background-color: white;
