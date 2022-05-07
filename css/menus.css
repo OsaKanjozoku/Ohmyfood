@@ -99,6 +99,9 @@ header img {
 
 .menu {
   width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
   border-top-left-radius: 50px;
   border-top-right-radius: 50px;
   background-color: rgb(245, 245, 245);
@@ -107,22 +110,19 @@ header img {
 }
 .menu ul {
   padding-left: 5px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
 }
 .menu li {
   background-color: white;
   box-sizing: border-box;
-  width: 97%;
+  width: 100%;
   height: 80px;
   padding: 0px 30px 5px 20px;
-  margin: 5px;
+  margin-bottom: 10px;
   border-radius: 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  font-size: 1.2em;
 }
 .menu h1 {
   display: flex;
@@ -138,10 +138,6 @@ header img {
 }
 .menu h3 {
   margin: 0px 0px 10px 0px;
-}
-.menu p {
-  font-size: 1.1em;
-  margin: 0px;
 }
 .menu .heart {
   color: rgb(163, 163, 163);
@@ -161,6 +157,16 @@ header img {
 }
 .menu .heart:hover i:nth-child(2) {
   display: none;
+}
+.menu a {
+  width: 100%;
+}
+.menu a:link {
+  color: black;
+  text-decoration: none;
+}
+.menu a:visited {
+  color: black;
 }
 
 h2 {
