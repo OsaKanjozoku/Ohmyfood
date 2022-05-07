@@ -136,7 +136,7 @@ body {
 }
 .fonctionnement .number {
   width: 50px;
-  margin: 0px;
+  margin: auto;
   padding: 0px;
   transform: translate(26px, 55px);
   font-size: 0.9em;
@@ -186,6 +186,7 @@ body {
   overflow: hidden;
   margin-bottom: 15px;
   background-color: white;
+  position: relative;
 }
 .restaurants__box .new {
   background-color: #99E2D0;
@@ -197,8 +198,8 @@ body {
   font-size: 1.1em;
   border-radius: 10px;
   position: absolute;
-  top: 87.5%;
-  right: 5%;
+  top: 5%;
+  right: 3%;
 }
 .restaurants a {
   color: black;
@@ -234,10 +235,11 @@ body {
 }
 .restaurants .heart {
   color: rgb(163, 163, 163);
-  transform: translate(590px, -65px);
+  float: right;
   font-size: 1.7em;
   width: 30px;
   height: 30px;
+  transform: translate(-20px, -20px);
 }
 .restaurants .heart i:nth-child(1) {
   display: none;
