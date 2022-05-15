@@ -129,6 +129,9 @@ header img {
   align-items: center;
   font-size: 1.2em;
 }
+.menu li:hover {
+  font-size: 1.05em;
+}
 .menu li:hover .--prix {
   transform: translateX(-80px);
   height: 100%;
