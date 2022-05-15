@@ -136,7 +136,7 @@ body {
 }
 .fonctionnement .number {
   width: 50px;
-  margin: auto;
+  margin: 0px;
   padding: 0px;
   transform: translate(26px, 55px);
   font-size: 0.9em;
