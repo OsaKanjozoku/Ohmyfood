@@ -37,6 +37,7 @@ footer ul {
 }
 footer li {
   margin-bottom: 7px;
+  transition: transform 0.5s;
 }
 footer h1 {
   margin-bottom: 10px;
@@ -131,6 +132,7 @@ header img {
 }
 .menu li:hover {
   font-size: 1.05em;
+  margin: 0px;
 }
 .menu li:hover .--prix {
   transform: translateX(-80px);

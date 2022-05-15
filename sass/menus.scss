@@ -68,6 +68,7 @@ header{
         font-size: 1.2em;
         &:hover{
             font-size: 1.05em;
+            margin: 0px;
             .--prix{
                 transform: translateX(-80px);
                 height: 100%;

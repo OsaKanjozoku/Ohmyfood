@@ -76,6 +76,7 @@ $white: white;
     }
     & li{
         margin-bottom: 7px;
+        transition: transform .5s;
     }
     & h1{
         margin-bottom: 10px;
