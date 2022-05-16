@@ -328,3 +328,139 @@
             }
     }
 }
+
+@media only screen and (min-width: 768px) and (max-width: 1023px){
+    html{
+        display: flex;
+        width: 100%;
+        flex-wrap: wrap;
+    }
+    header{
+        height: 5%;
+        margin: 0px;
+    }
+    .entête{
+        width: 100%;
+        height: 15%;
+        margin-bottom: 2%;
+        font-size: 1.1em;
+        border-radius: 30px;
+        & .submit{
+            margin: 0px;
+            &:hover{
+                transform: scale(1.3);
+            }
+        }
+        & .ville{
+            border-radius: 20px;
+            margin: 3%;
+        }
+    }
+    .fonctionnement{
+        width: 30%;
+        float: left;
+        margin-bottom: 5%;
+        position: sticky;
+        top: 2%;
+        & h1{
+            display: none;
+        }
+        &__submit{
+            display: flex;
+            align-items: center;
+            height: 100px;
+            width: 85%;
+            text-align: center;
+            &:hover{
+                transform: scale(1.1);
+            }
+        }
+        & .fa-circle, .number{
+            display: none;
+        }
+        & ul{
+            background-color: rgb(73,73,73);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            margin: 0px;
+            border-radius: 20px;
+        }
+        & i{
+            padding-left: 10%;
+            padding-right: 5%;
+        }
+    }
+    .restaurants{
+        width: 69%;
+        float: right;
+        align-items: center;
+        border-radius: 20px;
+        & h1{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            color: $color-primary;
+        }
+        &__box{
+            width: 95%;
+            height: 600px;
+            margin: auto;
+            margin-bottom: 3%;
+            background-color: $color-primary;
+            &:hover{
+                transform: scale(1.05);
+            }
+        }
+        &__box img{
+            height: 500px;
+        }
+        & .fa-heart{
+            color: $white;
+        }
+        & a:hover{
+            color: $color-secondary;
+        }
+        & .new{
+            background-color: $color-secondary;
+            color: $white;
+        }
+        & .heart:hover{
+            color: $color-secondary;
+            cursor: grab;
+            i:nth-child(1){
+                color: $color-secondary;
+                display: block;
+            }
+            i:nth-child(2){
+                display: none;
+            }
+        }
+    }
+    footer{
+        width: 30%;
+        border-radius: 20px;
+        position: sticky;
+        top: 45%;
+        & ul{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 80%;
+        }
+        & h1{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 20%;
+        }
+        & h2{
+            margin-bottom: 70%;
+        }
+        & a:hover{
+            color: $color-primary;
+        }
+    }
+}
