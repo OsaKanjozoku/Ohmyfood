@@ -10,6 +10,7 @@
 $color-primary: #9356DC;
 $color-secondary: #FF79DA;
 $color-tertiary: #99E2D0;
+$color-desktop: #C6A6ED;
 $white: white;
 @mixin body-style{
     body{
@@ -22,6 +23,8 @@ $white: white;
     html{
         font-size: 15px;
         width: 100%;
+        box-sizing: border-box;
+        padding: 5px;
         & ul{
             list-style-type: none;
         }
