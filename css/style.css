@@ -155,6 +155,9 @@ body {
 .fonctionnement i {
   padding-right: 40px;
 }
+.fonctionnement .fa-mobile-screen, .fonctionnement .fa-list, .fonctionnement .fa-store {
+  padding-left: 20px;
+}
 .fonctionnement ul {
   padding-left: 0px;
   margin-top: -30px;
@@ -473,7 +476,7 @@ body {
     float: left;
     margin-bottom: 5%;
     position: sticky;
-    top: 2%;
+    top: 1%;
   }
   .fonctionnement h1 {
     display: none;
@@ -502,6 +505,7 @@ body {
     justify-content: space-around;
     margin: 0px;
     border-radius: 20px;
+    height: 400px;
   }
   .fonctionnement i {
     padding-left: 10%;

@@ -264,7 +264,6 @@ header{
             justify-content: center;
             align-items: center;
             img{
-                display: flex;
                 width: 40%;
             }
             &:link, &:visited{
@@ -306,6 +305,7 @@ header{
         }
         .Entrées, .Plats, .Desserts{
             width: 32%;
+            font-size: 1em;
             h2{
                 margin-bottom: 50px;
             }
@@ -395,6 +395,8 @@ header{
     & .submit{
         font-size: 1.2em;
         letter-spacing: 2px;
+        background: $color-secondary;
+        color: black;
         &:hover{
             color: black;
             letter-spacing: 2px;

@@ -318,7 +318,6 @@ ul {
     align-items: center;
   }
   header .desktop img {
-    display: flex;
     width: 40%;
   }
   header .desktop:link, header .desktop:visited {
@@ -357,6 +356,7 @@ ul {
   }
   .restaurant .Entrées, .restaurant .Plats, .restaurant .Desserts {
     width: 32%;
+    font-size: 1em;
   }
   .restaurant .Entrées h2, .restaurant .Plats h2, .restaurant .Desserts h2 {
     margin-bottom: 50px;
@@ -435,6 +435,8 @@ ul {
   .button .submit {
     font-size: 1.2em;
     letter-spacing: 2px;
+    background: #FF79DA;
+    color: black;
   }
   .button .submit:hover {
     color: black;
