@@ -55,50 +55,59 @@
 
 
 .fonctionnement{
-    font-size: 1.5em;
+    font-size: 1.3em;
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
     h1{
         padding-left: 20px;
     }
-    & .fa-circle{
-        padding-right: 0px;
-        color: $color-primary;
-        font-size: 1.3em;
-        transform: translate(18px, 85px);
-    }
-    & .number{
-        width: 50px;
-        margin: 0px;
-        padding: 0px;
-        transform: translate(26px, 55px);
-        font-size: 0.9em;
-        color: $white;
-    }
-    & i{
-        padding-right: 40px;
-    }
-    .fa-mobile-screen, .fa-list, .fa-store{
-        padding-left: 20px;
-    }
-    & ul{
-        padding-left: 0px;
-        margin-top: -30px;
-        height: 500px;
+    & ol{
+        padding-left: 50px;
+        margin-top: 30px;
+        margin-bottom: 30px;
+        height: auto;
         justify-content: space-between;
+        .li-first, .li-second, .li-tertiary{
+            &::before{
+                color: black;
+                background: $color-primary;
+                border-radius: 50%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 30px;
+                height: 30px;
+                font-size: 1.2em;
+                transform: translate(-15px, 60px);
+            }
+        }
+        .li-first::before{
+            content: "1";
+        }
+        .li-second::before{
+            content: "2";
+        }
+        .li-tertiary::before{
+            content: "3";
+        }
+        i{
+            padding-right: 10%;
+        }
     }
     &__submit{
-        width: 95%;
+        width: 92%;
         height: 90px;
         border-radius: 30px;
         border: none;
         font-size: 1.1em;
         padding: 0px;
-        margin-left: 10px;
-        margin-bottom: -20px;
+        margin-bottom: 20px;
         transition: transform .4s;
         cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
     &__submit:hover{
         background-color: #dabffdbd;
@@ -250,7 +259,7 @@
         & h1{
             display: none;
         }
-        & ul{
+        & ol{
             border-radius: 30px;
             background-color: $color-tertiary;
             display: flex;
@@ -260,6 +269,11 @@
             height: 100%;
             margin: 0px;
             font-size: 1.2em;
+            .li-first, .li-second, .li-tertiary{
+                &::before{
+                    display: none;
+                }
+            }
             & .fa-circle{
                 width: 30px;
             }
@@ -278,9 +292,6 @@
                     color: $white;
                 }
             }
-        }
-        & .fa-circle, .number{
-            display: none;
         }
     }
     .restaurants{
@@ -427,22 +438,24 @@
                 }
             }
         }
-        & .fa-circle, .number{
-            display: none;
-        }
-        & ul{
+        & ol{
             display: flex;
             flex-direction: column;
             justify-content: space-around;
             margin: 0px;
             border-radius: 20px;
             height: 400px;
+            .li-first, .li-second, .li-tertiary{
+                &::before{
+                    display: none;
+                }
+            }
+            i{
+                padding-right: 10%;
+                margin-left: 2%;
+            }
+        }
 
-        }
-        & i{
-            padding-left: 10%;
-            padding-right: 5%;
-        }
     }
     .restaurants{
         width: 69%;
