@@ -718,3 +718,260 @@ ul {
         }
     }
 }
+
+@media screen and (min-width: 1441px) {
+    html {
+        display: flex;
+        width: 100%;
+        flex-wrap: wrap;
+    }
+
+    body {
+        height: 100%;
+    }
+
+    header {
+        height: 150px;
+        padding-bottom: 2%;
+        justify-content: center;
+        padding-top: 3%;
+        background-color: rgb(245, 245, 245);
+
+        .desktop {
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+            width: 100%;
+            height: 100%;
+            justify-content: center;
+            align-items: center;
+
+            p {
+                i {
+                    font-size: 1em;
+                    padding-right: 5px;
+                    padding-left: 5px;
+                }
+            }
+
+            img {
+                width: 40%;
+            }
+
+            &:link,
+            &:visited {
+                text-decoration: none;
+                text-align: center;
+                color: black;
+            }
+
+            &:hover {
+
+                p,
+                i {
+                    color: $color-tertiary;
+                }
+            }
+        }
+
+        .submit,
+        .logo {
+            display: none;
+        }
+    }
+
+    .entête {
+        box-sizing: border-box;
+        width: 80%;
+        padding: 20px;
+        background-color: rgb(211, 211, 211);
+        border-radius: 30px;
+        margin-left: 10%;
+        border: 2px solid black;
+        margin-bottom: 5%;
+
+        &:hover {
+            transform: scale(1.1);
+        }
+    }
+
+    .restaurant {
+        flex-direction: row;
+        width: 100%;
+        flex-wrap: wrap;
+        padding: 0px;
+        transform: translateY(0px);
+
+        .heading {
+            margin-left: 20%;
+
+            h2 {
+                padding: 0px;
+            }
+
+            .heart {
+                margin-right: 30%;
+
+                &:hover {
+                    cursor: grab;
+
+                    i:nth-child(1) {
+                        color: $color-desktop-2;
+                        display: block;
+                    }
+
+                    i:nth-child(2) {
+                        display: none;
+                    }
+                }
+            }
+        }
+
+        .Entrées,
+        .Plats,
+        .Desserts {
+            width: 32%;
+            font-size: 1em;
+
+            h2 {
+                margin-bottom: 10px;
+            }
+        }
+
+        .Entrées {
+            margin-left: 1%
+        }
+
+        .Desserts {
+            margin-right: 1%;
+        }
+
+        li {
+            height: 120px;
+        }
+    }
+
+    .button {
+        .submit {
+            background: rgb(0, 181, 136);
+            background: linear-gradient(180deg, rgba(0, 181, 136, 1) 5%, rgba(153, 226, 208, 1) 51%);
+            color: black;
+            font-size: 1.1em;
+
+            &:hover {
+                color: black;
+            }
+        }
+    }
+
+    footer {
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+
+        h1 {
+            font-size: 2.5em;
+        }
+
+        ul {
+            font-size: 1.5em;
+        }
+
+        a:hover {
+            color: $color-tertiary;
+            text-decoration: 1px underline $color-tertiary;
+            text-underline-offset: 2px;
+        }
+    }
+
+
+    @keyframes entrées {
+        0% {
+            transform: translateX(300%);
+        }
+
+        100% {
+            transform: translateX(0%);
+        }
+    }
+
+    @keyframes plats {
+        0% {
+            transform: translateX(200%);
+        }
+
+        100% {
+            transform: translateX(0%);
+        }
+    }
+
+    @keyframes desserts {
+        0% {
+            transform: translateX(100%);
+        }
+
+        100% {
+            transform: translateX(0%);
+        }
+    }
+
+    .Entrées li:nth-child(1) {
+        animation: entrées cubic-bezier(.66, .97, .56, 1.06) 1.5s;
+    }
+
+    .Entrées li:nth-child(2) {
+        animation: entrées cubic-bezier(.66, .97, .56, 1.06) 1.5s .1s;
+    }
+
+    .Entrées li:nth-child(3) {
+        animation: entrées cubic-bezier(.66, .97, .56, 1.06) 1.5s .2s;
+    }
+
+    .Entrées li:nth-child(4) {
+        animation: entrées cubic-bezier(.66, .97, .56, 1.06) 1.5s .3s;
+    }
+
+    .Plats li:nth-child(1) {
+        animation: plats cubic-bezier(.66, .97, .56, 1.2) 1.5s;
+    }
+
+    .Plats li:nth-child(2) {
+        animation: plats cubic-bezier(.66, .97, .56, 1.2) 1.5s .1s;
+    }
+
+    .Plats li:nth-child(3) {
+        animation: plats cubic-bezier(.66, .97, .56, 1.2) 1.5s .2s;
+    }
+
+    .Plats li:nth-child(4) {
+        animation: plats cubic-bezier(.66, .97, .56, 1.2) 1.5s .3s;
+    }
+
+    .Desserts li:nth-child(1) {
+        animation: plats cubic-bezier(.66, .97, .56, 1.2) 1.5s;
+    }
+
+    .Desserts li:nth-child(2) {
+        animation: plats cubic-bezier(.66, .97, .56, 1.2) 1.5s .1s;
+    }
+
+    .Desserts li:nth-child(3) {
+        animation: plats cubic-bezier(.66, .97, .56, 1.2) 1.5s .2s;
+    }
+
+    .Desserts li:nth-child(4) {
+        animation: plats cubic-bezier(.66, .97, .56, 1.2) 1.5s .3s;
+    }
+
+    .Entrées .titres-plats {
+        animation: entrées cubic-bezier(.66, .97, .56, 1.2) 1.5s;
+    }
+
+    .Plats .titres-plats {
+        animation: plats cubic-bezier(.66, .97, .56, 1.2) 1.5s;
+    }
+
+    .Desserts .titres-plats {
+        animation: desserts cubic-bezier(.66, .97, .56, 1.2) 1.5s;
+    }
+}
