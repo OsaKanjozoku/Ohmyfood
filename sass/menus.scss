@@ -722,8 +722,9 @@ ul {
 @media screen and (min-width: 1441px) {
     html {
         display: flex;
-        width: 100%;
+        width: 70%;
         flex-wrap: wrap;
+        margin: 0 15% 0 15%;
     }
 
     body {
@@ -742,7 +743,7 @@ ul {
             flex-wrap: wrap;
             flex-direction: column;
             width: 100%;
-            height: 100%;
+            height: auto;
             justify-content: center;
             align-items: center;
 
