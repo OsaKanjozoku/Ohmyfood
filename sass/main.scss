@@ -6,16 +6,149 @@
 @include body-style;
 
 
-.entête{
+html {
+    .submit:hover {
+        filter: brightness(1.3);
+    }
+}
+
+
+.loading {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    animation: loading-out 0s ease-in 2.5s forwards;
+    width: 100%;
+    height: 100%;
+    background-color: $white;
+    z-index: 1;
+
+    i {
+        display: flex;
+        width: 50px;
+        height: 50px;
+        justify-content: center;
+        align-items: center;
+        color: black;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        font-size: 1.5em;
+        animation: zoom-i 2s infinite;
+    }
+}
+
+@keyframes loading-out {
+    to {
+        width: 0;
+        height: 0;
+        overflow: hidden;
+        visibility: hidden;
+    }
+}
+
+@keyframes zoom-i {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+
+
+.spinner,
+.spinner-left {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+
+    &::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        z-index: 1000;
+        overflow: hidden;
+    }
+
+    &::after {
+        box-sizing: border-box;
+        z-index: 1001;
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin: -25px 0 0 -25px;
+        border-top: 10px solid $color-primary;
+        border-bottom: 10px solid $color-primary;
+        border-right: 10px solid transparent;
+        border-left: 10px solid transparent;
+        border-radius: 50%;
+        width: 100px;
+        height: 100px;
+        animation: spinner-right cubic-bezier(.68, .41, .24, 1) 2s infinite;
+    }
+}
+
+.spinner-left::after {
+    width: 70px;
+    height: 70px;
+    margin: -10px 0 0 -10px;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-right: 10px solid $color-secondary;
+    border-left: 10px solid $color-secondary;
+    animation: spinner-left cubic-bezier(.68, .41, .24, 1) 2s infinite;
+}
+
+@keyframes spinner-right {
+    0% {
+        transform: rotate(0);
+    }
+
+    100% {
+        transform: rotate(3turn);
+    }
+}
+
+@keyframes spinner-left {
+    0% {
+        transform: rotate(0);
+    }
+
+    100% {
+        transform: rotate(-1.5turn);
+    }
+}
+
+
+header {
+    border-bottom: 2px solid rgb(212, 212, 212);
+    margin-bottom: 0px;
+}
+
+
+.entête {
     background-color: rgb(243, 243, 243);
     display: flex;
     flex-wrap: wrap;
     width: 100%;
-    height: 300px;
+    height: 350px;
     justify-content: space-around;
     align-items: center;
     text-align: center;
-    & .submit{
+    margin-bottom: 20px;
+
+    & .submit {
         color: $white;
         background: $color-primary;
         background: linear-gradient(0deg, $color-primary 0%, $color-secondary 73%);
@@ -27,15 +160,22 @@
         font-size: 1em;
         transition: transform .4s;
         cursor: pointer;
+
+        &:hover {
+            transform: scale(1.1);
+        }
     }
-    & h1{
+
+    & h2 {
         font-size: 2em;
     }
-    & p{
+
+    & p {
         width: 100%;
         font-size: 1.2em;
     }
-    & .ville{
+
+    & .ville {
         background-color: rgb(231, 231, 231);
         text-align: center;
         height: 60px;
@@ -45,7 +185,12 @@
         margin: 0px;
         font-size: 1.2em;
         letter-spacing: 0.1em;
-        &:hover{
+
+        i {
+            padding-right: 5px;
+        }
+
+        &:hover {
             background-color: $color-tertiary;
             cursor: pointer;
         }
@@ -54,22 +199,29 @@
 
 
 
-.fonctionnement{
+.fonctionnement {
     font-size: 1.3em;
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-    h1{
+    margin-bottom: 20px;
+
+    h2 {
         padding-left: 20px;
+        margin-bottom: 0px;
     }
-    & ol{
-        padding-left: 50px;
-        margin-top: 30px;
+
+    & ol {
+        padding-left: 35px;
+        margin-top: 0px;
         margin-bottom: 30px;
         height: auto;
         justify-content: space-between;
-        .li-first, .li-second, .li-tertiary{
-            &::before{
+
+        .li-first,
+        .li-second,
+        .li-tertiary {
+            &::before {
                 color: black;
                 background: $color-primary;
                 border-radius: 50%;
@@ -82,48 +234,56 @@
                 transform: translate(-15px, 60px);
             }
         }
-        .li-first::before{
+
+        .li-first::before {
             content: "1";
         }
-        .li-second::before{
+
+        .li-second::before {
             content: "2";
         }
-        .li-tertiary::before{
+
+        .li-tertiary::before {
             content: "3";
         }
-        i{
+
+        i {
             padding-right: 10%;
         }
     }
-    &__submit{
+
+    &__submit {
         width: 92%;
         height: 90px;
         border-radius: 30px;
         border: none;
         font-size: 1.1em;
         padding: 0px;
-        margin-bottom: 20px;
+        margin-bottom: 10px;
         transition: transform .4s;
         cursor: pointer;
         display: flex;
         justify-content: center;
         align-items: center;
     }
-    &__submit:hover{
+
+    &__submit:hover {
         background-color: #dabffdbd;
-        & i{
+
+        & i {
             color: $color-primary;
         }
     }
 }
 
-.restaurants{
+.restaurants {
     display: flex;
     flex-direction: column;
     max-width: 100%;
     background-color: rgb(233, 233, 233);
     font-size: 1.3em;
-    &__box{
+
+    &__box {
         box-sizing: border-box;
         justify-content: space-around;
         width: 95%;
@@ -131,13 +291,14 @@
         height: 350px;
         border: 2px solid $white;
         border-radius: 20px;
-        text-align:left;
+        text-align: left;
         overflow: hidden;
         margin-bottom: 15px;
         background-color: $white;
         position: relative;
         transition: transform .4s;
-        & .new{
+
+        & .new {
             background-color: $color-tertiary;
             color: #007054;
             width: 85px;
@@ -145,23 +306,24 @@
             margin: 0px;
             padding: 3px;
             font-size: 1.1em;
-            border-radius: 10px;
             position: absolute;
             top: 5%;
             right: 3%;
         }
     }
 
-    & a{
+    & a {
         color: black;
         text-decoration: none;
         width: 650px;
         height: 350px;
+
+        &:hover {
+            color: $color-tertiary ;
+        }
     }
-    & a:hover{
-        color: $color-tertiary ;
-    }
-    &__box img{
+
+    &__box img {
         box-sizing: border-box;
         width: 100%;
         height: 250px;
@@ -172,36 +334,45 @@
         border-top-right-radius: 20px;
         overflow: hidden;
     }
-    & ul{
+
+    & ul {
         padding-left: 0px;
     }
-    & h3{
+
+    & h3 {
         margin: 5px 0px 0px 15px;
     }
-    & h1{
+
+    & h2 {
         width: 200px;
         padding-left: 20px;
     }
-    & p{
+
+    & p {
         margin: 10px 0px 0px 15px;
     }
-    & .heart{
+
+    & .heart {
         color: rgb(163, 163, 163);
         float: right;
         font-size: 1.7em;
         width: 30px;
         height: 30px;
         transform: translate(-20px, -20px);
-        i:nth-child(1){
+
+        i:nth-child(1) {
             display: none;
         }
-        &:hover{
+
+        &:hover {
             cursor: grab;
-            i:nth-child(1){
+
+            i:nth-child(1) {
                 color: $color-primary;
                 display: block;
             }
-            i:nth-child(2){
+
+            i:nth-child(2) {
                 display: none;
             }
         }
@@ -210,56 +381,76 @@
 
 
 
-@media screen and (min-width: 1024px){
-    html{
+@media screen and (min-width: 1024px) {
+    html {
         display: flex;
         width: 100%;
         flex-wrap: wrap;
     }
-    header{
+
+    .spinner::after {
+        border-top: 10px solid $color-desktop-2;
+        border-bottom: 10px solid $color-desktop-2;
+    }
+
+    .spinner-left::after {
+        border-right: 10px solid $color-tertiary;
+        border-left: 10px solid $color-tertiary;
+    }
+
+    header {
         box-sizing: border-box;
         height: auto;
         padding: 40px;
         margin-bottom: 15px;
-        & img{
+        border-color: transparent;
+
+        & img {
             margin: 0px;
             width: 500px;
             height: 90px;
         }
     }
-    .entête{
+
+    .entête {
         width: 35%;
-        height: 30%;
+        height: 500px;
         margin-left: 1%;
         float: left;
         margin-bottom: 100px;
         font-size: 1.1em;
         border-radius: 30px;
-        & .submit{
+
+        & .submit {
             margin: 0px;
-            background: rgb(153,226,208);
-            background: linear-gradient(180deg, rgba(153,226,208,1) 5%, rgba(0,196,147,1) 64%);
-            &:hover{
+            background: rgb(153, 226, 208);
+            background: linear-gradient(180deg, rgba(153, 226, 208, 1) 5%, rgba(0, 196, 147, 1) 64%);
+
+            &:hover {
                 transform: scale(1.3);
                 color: black;
-                border: 1px dashed #00291F;
+                border: 1px dashed $color-desktop-2;
             }
         }
-        & .ville{
+
+        & .ville {
             border-radius: 20px;
             margin: 20px;
         }
     }
-    .fonctionnement{
+
+    .fonctionnement {
         width: 62%;
-        height: 30%;
+        height: 500px;
         margin-right: 1%;
         float: right;
         margin-bottom: 100px;
-        & h1{
+
+        & h2 {
             display: none;
         }
-        & ol{
+
+        & ol {
             border-radius: 30px;
             background-color: $color-tertiary;
             display: flex;
@@ -270,34 +461,43 @@
             margin: 0px;
             padding: 0px;
             font-size: 1.2em;
-            .li-first, .li-second, .li-tertiary{
-                &::before{
+
+            .li-first,
+            .li-second,
+            .li-tertiary {
+                &::before {
                     display: none;
                 }
             }
-            & .fa-circle{
-                width: 30px;
-            }
         }
-        &__submit{
+
+        &__submit {
             width: 95%;
-            height: 70px;
+            height: 130px;
             margin: 0px 0px 0px 2%;
-            &:hover{
+
+            &:hover {
                 transform: scale(1.02);
                 background-color: #00c493b4;
                 color: $white;
                 text-decoration: underline 2px;
                 text-underline-offset: 2px;
-                i{
+
+                i {
                     color: $white;
                 }
             }
         }
     }
-    .restaurants{
+
+    .restaurants {
         width: 100%;
-        & h1{
+
+        .new {
+            border-radius: 10px;
+        }
+
+        & h2 {
             width: 100%;
             display: flex;
             justify-content: center;
@@ -308,9 +508,10 @@
             font-size: 2.5em;
             margin-bottom: 50px;
             padding-left: 0px;
-            color: #00291F;
+            color: $color-desktop-2;
         }
-        & ul{
+
+        & ul {
             width: 100%;
             display: flex;
             flex-wrap: wrap;
@@ -318,152 +519,191 @@
             justify-content: space-around;
             align-items: center;
         }
-        &__box{
+
+        &__box {
             width: 48%;
             height: 600px;
             background-color: $color-tertiary;
             margin-bottom: 30px;
-            &:hover{
+
+            &:hover {
                 transform: scale(1.05);
-                border-color: #00291F;
+                border-color: $color-desktop-2;
             }
         }
-        &__box img{
+
+        &__box img {
             height: 500px;
         }
-        & .fa-heart{
+
+        & .fa-heart {
             color: $white;
         }
-        & a:hover{
-            color: black ;
+
+        & a:hover {
+            color: black;
         }
-        .heart{
-            &:hover{
+
+        .heart {
+            &:hover {
                 cursor: grab;
-                i:nth-child(1){
-                    color: #00291F;
+
+                i:nth-child(1) {
+                    color: $color-desktop-2;
                     display: block;
                 }
-                i:nth-child(2){
+
+                i:nth-child(2) {
                     display: none;
                 }
             }
         }
     }
-    footer{
+
+    footer {
         justify-content: center;
         align-items: center;
         word-spacing: 0.3em;
         font-size: 1.5em;
-        & ul{
+
+        & ul {
             width: 80%;
             height: 30%;
         }
-        & h1{
+
+        & h1 {
             letter-spacing: .5em;
             font-size: 1.7em;
-            color: #00291F;
+            color: $color-desktop-2;
         }
-        & li:nth-child(1), li:nth-child(3){
+
+        & li:nth-child(1),
+        li:nth-child(3) {
             float: left;
             width: 50%;
         }
-        & li:nth-child(2), li:nth-child(4){
+
+        & li:nth-child(2),
+        li:nth-child(4) {
             float: right;
             width: 50%;
             text-align: right;
         }
-        & li:hover{
-                transform: scale(1.1);
-            }
-        a:hover{
-            color: #00291F;
-            text-decoration: 1px underline #00291F;
+
+        & li:hover {
+            transform: scale(1.1);
+        }
+
+        a:hover {
+            color: $color-desktop-2;
+            text-decoration: 1px underline $color-desktop-2;
             text-underline-offset: 2px;
         }
     }
 }
 
-@media screen and (min-width: 768px) and (max-width: 1023px){
-    html{
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    html {
         display: flex;
         width: 100%;
         flex-wrap: wrap;
         background-color: $color-desktop;
     }
-    header{
+
+    header {
         height: 5%;
         margin: 0px;
+        margin-bottom: 10px;
+        border-color: transparent;
     }
-    .entête{
+
+    .entête {
         width: 100%;
-        height: 15%;
+        height: 400px;
         margin-bottom: 2%;
         font-size: 1.1em;
         border-radius: 30px;
-        & .submit{
+
+        & .submit {
             margin: 0px;
-            &:hover{
+            margin-bottom: 10px;
+
+            &:hover {
                 transform: scale(1.3);
             }
         }
-        & .ville{
+
+        & .ville {
             border-radius: 20px;
             margin: 3%;
-            &:hover{
+
+            &:hover {
                 background-color: $color-desktop;
             }
         }
     }
-    .fonctionnement{
+
+    .fonctionnement {
         width: 30%;
         float: left;
         margin-bottom: 5%;
         position: sticky;
         top: 15%;
-        & h1{
+
+        & h2 {
             display: none;
         }
-        &__submit{
+
+        &__submit {
             display: flex;
             align-items: center;
             height: 80px;
-            width: 90%;
+            width: 98%;
             text-align: center;
             background-color: $white;
-            &:hover{
+
+            &:hover {
                 background-color: $color-secondary;
                 transform: scale(1.05);
-                i{
+
+                i {
                     color: $color-primary;
                 }
             }
         }
-        & ol{
+
+        & ol {
             display: flex;
             flex-direction: column;
             justify-content: space-around;
             margin: 0px;
             border-radius: 20px;
             height: 400px;
-            .li-first, .li-second, .li-tertiary{
-                &::before{
+            padding-left: 2%;
+
+            .li-first,
+            .li-second,
+            .li-tertiary {
+                &::before {
                     display: none;
                 }
             }
-            i{
-                padding-right: 10%;
+
+            i {
+                padding-right: 5px;
                 margin-left: 2%;
             }
         }
 
     }
-    .restaurants{
+
+    .restaurants {
         width: 69%;
         float: right;
         align-items: center;
         border-radius: 20px;
-        & h1{
+
+        & h2 {
             display: flex;
             justify-content: center;
             align-items: center;
@@ -471,59 +711,73 @@
             color: $color-primary;
             padding: 0px;
         }
-        &__box{
+
+        &__box {
             width: 95%;
             height: 600px;
             margin: auto;
             margin-bottom: 3%;
             background-color: $color-desktop;
-            &:hover{
+
+            &:hover {
                 transform: scale(1.03);
                 border: 2px solid $color-secondary;
             }
         }
-        &__box img{
+
+        &__box img {
             height: 500px;
         }
-        & .fa-heart{
+
+        & .fa-heart {
             color: $white;
         }
-        & a:hover{
+
+        & a:hover {
             color: black;
         }
-        & .new{
+
+        & .new {
             background-color: $color-desktop;
+            border-radius: 10px;
             color: black;
         }
-        & .heart:hover{
+
+        & .heart:hover {
             color: $color-secondary;
             cursor: grab;
-            i:nth-child(1){
+
+            i:nth-child(1) {
                 color: $color-secondary;
                 display: block;
             }
-            i:nth-child(2){
+
+            i:nth-child(2) {
                 display: none;
             }
         }
     }
-    footer{
+
+    footer {
         width: 100%;
         font-size: 1.5em;
-        & ul{
+
+        & ul {
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
             height: auto;
         }
-        & h1{
+
+        & h1 {
             display: flex;
             justify-content: center;
             align-items: center;
             color: $color-desktop;
         }
-        & a:hover{
+
+        & a:hover {
             color: $color-secondary;
             text-decoration: 2px underline;
             text-underline-offset: 2px;
