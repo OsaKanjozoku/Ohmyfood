@@ -4,6 +4,11 @@
 @include font-family;
 @include body-style;
 
+
+html{
+    background-color: rgb(245, 245, 245);
+}
+
 header {
     display: flex;
     width: 100%;
@@ -67,15 +72,16 @@ header {
     border-top-left-radius: 40px;
     border-top-right-radius: 40px;
     transform: translateY(-50px);
+    margin-bottom: 0px;
 
     .Entrées,
-    .Plats,
-    .Desserts {
+    .Plats {
         margin-bottom: 40px;
 
         h2 {
             font-family: 'Roboto';
             text-transform: uppercase;
+            font-weight: normal;
         }
     }
 
@@ -95,7 +101,8 @@ header {
             height: 50px;
             margin: 0px;
             padding: 20px;
-            font-size: 1.5em;
+            font-size: 1.9em;
+            font-weight: normal;
             font-family: 'Shrikhand';
             word-spacing: 0.2em;
         }
@@ -219,7 +226,7 @@ ul {
     justify-content: center;
     align-items: center;
     height: 150px;
-    margin-top: -40px;
+    margin-top: 0px;
 
     .submit {
         display: flex;
@@ -487,12 +494,13 @@ ul {
     }
 
     .button {
+        display: flex;
+        width: 100%;
         .submit {
             background: rgb(0, 181, 136);
             background: linear-gradient(180deg, rgba(0, 181, 136, 1) 5%, rgba(153, 226, 208, 1) 51%);
             color: black;
             font-size: 1.1em;
-
             &:hover {
                 color: black;
             }
